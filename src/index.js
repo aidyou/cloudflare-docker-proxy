@@ -1,14 +1,3 @@
-// import DOCS from './help.html'
-
-// // return docs
-// if (url.pathname === "/") {
-//   return new Response(DOCS, {
-//     status: 200,
-//     headers: {
-//       "content-type": "text/html"
-//     }
-//   });
-// }
 addEventListener("fetch", (event) => {
   event.passThroughOnException();
   event.respondWith(handleRequest(event.request));
@@ -19,16 +8,16 @@ const dockerHub = "https://registry-1.docker.io";
 const routes = {
   // production
   "docker.7x.pub": dockerHub,
-  "quay.7x.pub": "https://quay.io",
-  "gcr.7x.pub": "https://gcr.io",
-  "k8s-gcr.7x.pub": "https://k8s.gcr.io",
-  "k8s.7x.pub": "https://registry.k8s.io",
-  "ghcr.7x.pub": "https://ghcr.io",
-  "cloudsmith.7x.pub": "https://docker.cloudsmith.io",
-  "ecr.7x.pub": "https://public.ecr.aws",
+  // "quay.7x.pub": "https://quay.io",
+  // "gcr.7x.pub": "https://gcr.io",
+  // "k8s-gcr.7x.pub": "https://k8s.gcr.io",
+  // "k8s.7x.pub": "https://registry.k8s.io",
+  // "ghcr.7x.pub": "https://ghcr.io",
+  // "cloudsmith.7x.pub": "https://docker.cloudsmith.io",
+  // "ecr.7x.pub": "https://public.ecr.aws",
 
-  // staging
-  "docker-staging.7x.pub": dockerHub,
+  // // staging
+  // "docker-staging.7x.pub": dockerHub,
 };
 
 function routeByHosts(host) {
